@@ -1,20 +1,27 @@
+module 		:= hello_world
+call 		:= hello
+
 CC      	:= erlc
 RUNNER		:= erl
-SOURCE 		:= hello_world.erl
-PROGRAM 	:= hello_world
-FUNCTION 	:= hello
-CCFLAGS 	:= erl -noshell -s $(PROGRAM) $(FUNCTION) -s init stop
+PROGRAM 	:= $(module)
+FUNCTION 	:= $(call)
+CCFLAGS 	:= -noshell -s $(PROGRAM) $(FUNCTION) -s init stop
+
+all: run
 
 compile: 
-	$(CC) $(SOURCE) $(run)
+	$(info compiling ...)
+	@$(CC) $(PROGRAM).erl
 	
-run:
-	$(RUNNER) $(CCFLAGS)
+run: compile
+	$(info running ...)
+	@$(RUNNER) $(CCFLAGS)
 
 .PHONY: clean
 
 clean:
-	rm -f *.beam *.dump
+	$(info cleaning up ...)
+	@rm -f *.beam *.dump
 
 
 
