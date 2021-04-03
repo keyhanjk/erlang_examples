@@ -22,7 +22,3 @@ run: compile
 clean:
 	$(info cleaning up ...)
 	@rm -f *.beam *.dump
-
-
-
-
