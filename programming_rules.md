@@ -4,7 +4,7 @@ http://www.erlang.se/doc/programming_rules.shtml
 
 Programming Rules
 
-[![Ericsson](../files/elogo.png)](http://www.ericsson.se)
+[![Ericsson](files/elogo.png)](http://www.ericsson.se)
 
 * * *
 
@@ -12,7 +12,7 @@ Programming Rules
 
 ![](/images/white.gif)
 
-[![Home](../files/Erlanglogo.gif)](/index.shtml)
+[![Home](files/Erlanglogo.gif)](/index.shtml)
 
  
 
@@ -179,11 +179,11 @@ We can simplify the system structure by reducing the number of different modules
 
 Note also that it is desirable that the inter-module calling dependencies form a tree and not a cyclic graph. Example:
 
-![](/images/module-dep-ok.gif)
+![](files/module-dep-ok.gif)
 
 But not
 
-![](/images/module-dep-bad.gif)
+![](files/module-dep-bad.gif)
 
 ### 3.3 Put commonly used code into libraries
 
