@@ -1,3 +1,7 @@
+Source 
+http://www.erlang.se/doc/programming_rules.shtml
+
+
 Programming Rules
 
 [![Ericsson](../files/elogo.png)](http://www.ericsson.se)
