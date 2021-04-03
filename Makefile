@@ -1,10 +1,10 @@
 module 		:= hello_world
-call 		:= hello
+init 		:= hello
 
 CC      	:= erlc
 RUNNER		:= erl
 PROGRAM 	:= $(module)
-FUNCTION 	:= $(call)
+FUNCTION 	:= $(init)
 CCFLAGS 	:= -noshell -s $(PROGRAM) $(FUNCTION) -s init stop
 
 all: run
@@ -17,8 +17,6 @@ run: compile
 	$(info running ...)
 	@$(RUNNER) $(CCFLAGS)
 
-.PHONY: clean
-
 clean:
 	$(info cleaning up ...)
-	@rm -f *.beam *.dump
+	@rm -f *.beam

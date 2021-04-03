@@ -1,4 +1,4 @@
--module(primitive_datatypes).
+-module(values).
 
 -export([show/0]).
 
