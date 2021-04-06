@@ -11,6 +11,7 @@ all: run
 
 compile: 
 	$(info compiling ...)
+	@$(RUNNER) -make
 	@$(CC) $(PROGRAM).erl
 	
 run: compile
