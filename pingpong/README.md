@@ -1,14 +1,15 @@
-concurrent-distributed-examples
-===============================
-
-A collection of examples written in Erlang that illustrates concurrent and distributed systems.
-
-- PingPong
-- Messenger
 
 ### PingPong
 
-In order to run it in the same machine, open two different terminals and do the following:
+** Connect Nodes **
+
+```
+erl -sname node1 -setcookie sample_cookie
+erl -sname node2 -setcookie sample_cookie
+```
+
+you can just copy $HOME/.erlang.cookie to other remote pc for sharing same cookie value.
+
 
 **Terminal 1**
 
@@ -26,6 +27,9 @@ $ c(pingpong).                   		# Compile the pingpong module
 $ pingpong:start_ping('pong@gvolpe-HXT4').      # Start ping with location of the pong node, that in my case, is the name of my machine 'gvolpe-HXT4'.
 ```
 
-### Messenger
+**Sample**
 
-TODO
+```
+pingpong:start_pong().
+pingpong:start_ping('node2@ibm').
+```
